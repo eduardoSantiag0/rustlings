@@ -4,7 +4,7 @@
 // not own their own data. What if their owner goes out of scope?
 
 // TODO: Fix the compiler error by updating the function signature.
-fn longest(x: &str, y: &str) -> &str {
+fn longest<'tempo_de_vida>(x: &'tempo_de_vida str, y: &'tempo_de_vida str) -> &'tempo_de_vida str {
     if x.len() > y.len() {
         x
     } else {
